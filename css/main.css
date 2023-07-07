@@ -1,38 +1,68 @@
-html {
-    height: 100%;
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    max-height: 100%;
-    background-image: url("../img/water-bg.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    min-height: 100vh;
+    background-color: #52b69a;
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
 
-#quoteWrap {
+#appWrap {
+    text-align: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 0 50px;
     flex-direction: column;
 }
 
 h1 {
-    font-family: 'Dancing Script', cursive;
     font-size: 3rem;
     font-weight: 400;
-    color: #fff;
-    text-shadow: #000 5px 5px 5px;
+    color: #000;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #000;
+}
+
+#nameWrap {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.name-box {
+    background-color: #fff;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.name-box .placeholder {
+    opacity: .4;
 }
 
 .swap-btn {
     cursor: pointer;
-    font-size: 1rem;
-    color: #fff;
     background-color: transparent;
+    color: #fff;
     border: 1px solid #fff;
-    padding: 6px 20px;
+    padding: 8px 20px;
+    margin: 20px;
+}
+
+.swap-btn:hover {
+    background-color: #fff;
+    color: #52b69a;;
 }

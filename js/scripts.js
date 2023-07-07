@@ -1,14 +1,48 @@
-const quoteWrapper = document.querySelector("h1");
+const nameWrapper = document.querySelector('div.name-box h2');
 
-const randomize = () => {
-    
-    const quotes = ['"Confidence is 10% hard work and 90% delusion."', '“Hard work never killed anybody, but why take a chance?”', '"Oh, you hate your job? Why didn’t you say so? There’s a support group for that. It’s called everybody, and they meet at the bar."']
-    
-    const randomNum = Math.round(Math.random() * (quotes.length -1));
-
-    const words = quotes[randomNum];
-
-    return quoteWrapper.innerHTML = words;
+// Generates random number
+const randomNum = num => {
+    return Math.floor(Math.random() * num);
 }
 
-randomize();
+// object holds the separate 
+const nameLists = {
+
+    firstNames: ["notebook", "groovy", "terrific", "power", "husky", "plug", "cannon", "wrong", "spill", "aware", "scandalous", "grateful"],
+    secondNames: ["unequaled", "hollow", "attempt", "roasted", "plucky", "toe", "automatic", "loving", "pick", "telling", "unite"],
+    thirdNames: ["tangible", "complete", "acidic", "wicked", "bruise", "heartbreaking", "nod", "heavy", "mix", "yarn", "dock", "kaput"]
+}
+
+const generateName = () => {
+
+    // Holds newly generate name
+    let newName = [];
+
+    for(let name in nameLists) {
+        
+        let randomId = randomNum(nameLists[name].length);
+
+        switch(name) {
+            case "firstNames":
+                newName.push(nameLists[name][randomId].toUpperCase())
+                break
+            case "secondNames":
+                newName.push(nameLists[name][randomId].toUpperCase())
+                break
+            case "thirdNames":
+                newName.push(nameLists[name][randomId].toUpperCase())
+                break
+            default:
+                newName.push("ERROR")
+        }
+    }
+
+    // Holds newly generate name
+    const formatName = name => {
+        return newName.join(" - ");
+    }
+
+    nameWrapper.innerHTML = formatName(newName);
+}
+
+

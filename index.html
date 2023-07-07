@@ -7,15 +7,21 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <div id="quoteWrap">
-        <h1></h1>
-        <button class="swap-btn" onclick="randomize()">Randomize!</button>
+    <div id="appWrap">
+        <h1>Name Generator</h1>
+        <div id="nameWrap">
+            <div class="name-box">
+                <h2><span class="placeholder">Click Button to Generate</span></h2>
+            </div>
+        </div>
+        <button class="swap-btn" onclick="generateName()">Randomize!</button>
     </div>
+
     <script type="text/javascript" src="./js/scripts.js"></script>
 </body>
 </html>
